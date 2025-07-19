@@ -1,0 +1,33 @@
+.ProductItem {
+    padding: 5px;
+}
+
+.ProductImage {
+    width: 300px;
+}
+
+.ProductName {
+    width: 300px;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.ProductStorage {
+    width: 300px;
+    font-size: 18px;
+}
+
+.ProductCode {
+    width: 300px;
+    font-size: 14px;
+    color: rgb(74, 74, 74);
+}
+
+.ProductCost {
+    width: 300px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: italic;
+}
