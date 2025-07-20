@@ -38,7 +38,9 @@ class Product extends React.Component {
                 <p className="ProductCost">
                     {this.props.productCost} {" "}руб.
                 </p>
-                <input type="button" name="btnDel" className="DeleteButton" value="Delete" onClick={this.productDelete}></input>
+                <div className="DeleteButtonDiv">
+                    <input type="button" name="btnDel" className="DeleteButton" value="Delete" onClick={this.productDelete}></input>
+                </div>
                 
             </div>
         )
