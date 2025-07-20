@@ -11,10 +11,5 @@ const wordsWithCodes = words.map((word, index) => ({
 
 ReactDOM.render(
     <FilterBlock words={wordsWithCodes} />,
-
-    // <Shop shopName="Цветаева" 
-    //       shopAddress="ул. Настоящая д.19" 
-    //       products={productsArr} 
-    // />, 
     document.getElementById('container') 
 );

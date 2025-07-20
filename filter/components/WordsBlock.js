@@ -5,14 +5,9 @@ import './WordsBlock.css';
 import Word from './Word'
 
 class WordsBlock extends React.Component {
-    
-    state = {
-        wordsNow: this.props.words,
-    }
 
     render () {
-
-        const wordsList=this.state.wordsNow.map(w => 
+        const wordsList=this.props.words.map(w => 
             <Word key={w.code} wordText={w.text} wordCode={w.code} />
         )
 
