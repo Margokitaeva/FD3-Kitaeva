@@ -13,7 +13,7 @@ class WordsBlock extends React.Component {
 
         return (
             <div className="Words">
-                {this.props.isSorted ? wordsList.sort((a, b) => a.props.wordText.localeCompare(b.props.wordText)) : wordsList}
+                {wordsList}
             </div>
         )
     }
