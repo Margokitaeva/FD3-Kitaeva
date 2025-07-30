@@ -1,0 +1,7 @@
+.BorderDiv {
+    border: solid 3px;
+    padding: 2px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
