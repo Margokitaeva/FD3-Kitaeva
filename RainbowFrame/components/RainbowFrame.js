@@ -9,7 +9,7 @@ class RainbowFrame extends React.Component {
             code = <div key={i} className="BorderDiv" style={{borderColor: `${this.props.colors[i]}`}}>{code}</div>;
         }
         return (
-            code
+            <div>{code}</div>
         );
     }
 }
