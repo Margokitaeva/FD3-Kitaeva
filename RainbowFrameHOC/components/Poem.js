@@ -4,7 +4,8 @@ import './Poem.css';
 import DoubleButton from './DoubleButton';
 import { withRainbowFrame } from './withRainbowFrame';
 
-
+const colors = ['red','orange', 'yellow','green', '#00BFFF', 'blue', 'purple'];
+const DoubleButtonWithFrame = withRainbowFrame(colors)(DoubleButton);
 
 class Poem extends React.Component {
 
@@ -13,10 +14,6 @@ class Poem extends React.Component {
     }
 
     render() {
-
-        let colors = ['red','orange', 'yellow','green', '#00BFFF', 'blue', 'purple'];
-        let DoubleButtonWithFrame = withRainbowFrame(colors)(DoubleButton);
-
         return(
             <div>
                 <DoubleButton caption1="однажды" caption2="пору" cbPressed={this.Pressed}> в студеную зимнюю </DoubleButton>
