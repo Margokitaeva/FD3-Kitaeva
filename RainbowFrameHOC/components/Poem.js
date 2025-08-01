@@ -15,7 +15,7 @@ class Poem extends React.Component {
     render() {
 
         let colors = ['red','orange', 'yellow','green', '#00BFFF', 'blue', 'purple'];
-        const DoubleButtonWithFrame = withRainbowFrame(colors)(DoubleButton);
+        let DoubleButtonWithFrame = withRainbowFrame(colors)(DoubleButton);
 
         return(
             <div>
