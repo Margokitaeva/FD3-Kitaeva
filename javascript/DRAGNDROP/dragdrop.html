@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drag&amp;drop</title>
+</head>
+<body style='min-height: 100vh'>
+    <img src='http://fe.it-academy.by/Sites/0000007/sax.jpg'>
+    <img src='http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png' width=100 style='vertical-align: 20px'>
+    <img src='http://fe.it-academy.by/Sites/0000007/Man-and-woman.png' width=150>
+    <img src='http://fe.it-academy.by/Sites/0000007/No_smoking.png' style='padding-left: 50px'>
+
+<script>
+    document.addEventListener('mousedown', mouseDown, false);
+    document.addEventListener('mousemove', mouseMove, false);
+    document.addEventListener('mouseup', mouseUp, false);
+
+    let currentImage = null;
+    let prevImage = null;
+
+    let mouseShiftX = 0;
+    let mouseShiftY = 0;
+
+    function mouseDown(eo) {
+        eo = eo || window.event;
+        eo.stopPropagation();
+
+        currentImage = eo.target;
+        console.log('currentImage', currentImage);
+
+        currentImage.style.position = 'absolute';
+
+        const rect = currentImage.getBoundingClientRect();
+        mouseShiftX = eo.pageX - rect.left;
+        mouseShiftY = eo.pageY - rect.top;
+
+        currentImage.style.zIndex = "10";
+        if (prevImage && prevImage !== currentImage)
+            prevImage.style.zIndex = "0";
+
+    }
+
+
+    function mouseUp(eo) {
+        eo = eo || window.event;
+        eo.stopPropagation();
+
+        prevImage = currentImage;
+        currentImage = null;
+    }
+
+
+    function mouseMove(eo) {
+        eo = eo || window.event;
+        eo.stopPropagation();
+        if (currentImage) {
+            currentImage.style.left = (eo.pageX - mouseShiftX) + "px";
+            currentImage.style.top = (eo.pageY - mouseShiftY) + "px";
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
