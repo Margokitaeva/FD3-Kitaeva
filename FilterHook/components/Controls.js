@@ -26,27 +26,18 @@ const Controls = props => {
 
     function checkboxChanged(eo) {
         setIsSorted(eo.target.checked);
-        // if (eo.target.checked) 
-        //     setWordsChosenNow(prev => [...prev].sort((a, b) => a.text.localeCompare(b.text)));
-        // else
-        //     setWordsChosenNow(props.words.filter(word => word.text.includes(textSearch)));
-        // props.cbWordsChanged(wordsChosenNow);
     }
 
 
     function textSearchFieldChanged(eo) {
         setTextSearch(eo.target.value);
-        // setWordsChosenNow(props.words.filter(word => word.text.includes(eo.target.value)).sort(isSorted ? (a, b) => a.text.localeCompare(b.text) : undefined));
-        // props.cbWordsChanged(wordsChosenNow);
     }
-
 
 
     function resetButtonPressed(eo) {
         setIsSorted(false);
         setTextSearch("");
         setWordsChosenNow(props.words);  
-        // props.cbWordsChanged(wordsChosenNow);
     }
 
 
