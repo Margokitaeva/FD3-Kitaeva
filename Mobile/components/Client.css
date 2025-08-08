@@ -1,0 +1,16 @@
+td {
+    padding: 12px 16px;
+}
+
+input.TextInput {
+    width: 90%;
+}
+
+input.BalanceInput {
+    width: 90%;
+}
+
+/* td.EditButtons { */
+    /* /* display: inline-block; */
+    /* justify-content: space-between;  */
+/* } */

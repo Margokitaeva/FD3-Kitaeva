@@ -1,0 +1,6 @@
+[
+    {"code": "1", "surname": "Иванов", "firstName": "Иван", "lastName": "Иванович", "balance": "200"},
+    {"code": "2", "surname": "Сидоров", "firstName": "Сидор", "lastName": "Сидорович", "balance": "250"},
+    {"code": "3", "surname": "Петров", "firstName": "Пётр", "lastName": "Петрович", "balance": "180"},
+    {"code": "4", "surname": "Григорьев", "firstName": "Григорий", "lastName": "Григорьевич", "balance": "-220"}
+]
