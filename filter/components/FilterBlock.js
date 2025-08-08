@@ -15,15 +15,15 @@ class FilterBlock extends React.Component {
     checkboxChanged = eo => {
         this.setState({isSorted: eo.target.checked});
         if (eo.target.checked)
-            this.setState({wordsChosenNow: this.state.wordsChosenNow.sort((a, b) => a.text.localeCompare(b.text))})
+            this.setState(prev => ({wordsChosenNow: [...prev.wordsChosenNow].sort((a, b) => a.text.localeCompare(b.text))}))
         else {
-            this.setState( (prevState) => { return {wordsChosenNow: this.props.words.filter(word => prevState.wordsChosenNow.some(prevWord => prevWord.code === word.code))}});
+            this.setState({wordsChosenNow: this.props.words.filter(word => word.text.includes(this.state.textSearch))});
         }
     }
 
     textSearchFieldChanged = eo => {
         this.setState({textSearch: eo.target.value});
-        this.setState({wordsChosenNow: this.state.wordsChosenNow.filter(word => word.text.includes(eo.target.value))});
+        this.setState({wordsChosenNow: this.props.words.filter(word => word.text.includes(eo.target.value)).sort(this.state.isSorted ? (a, b) => a.text.localeCompare(b.text) : undefined)});
     }
 
     resetButtonPressed = eo => {
